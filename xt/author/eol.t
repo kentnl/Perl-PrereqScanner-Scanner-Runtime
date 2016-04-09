@@ -20,6 +20,7 @@ my @files = (
     't/all_scanners.t',
     't/class-load/basic.t',
     't/module-load/basic.t',
+    't/module-load/ignored.t',
     't/module-runtime/fully_qualified.t',
     't/module-runtime/import.t',
     't/module-runtime/import_bare.t',
