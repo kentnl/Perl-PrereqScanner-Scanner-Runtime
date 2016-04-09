@@ -77,6 +77,8 @@ sub scan_for_prereqs {
     my $handler = $self->can( $subs{$subname}->[0] ) or croak "Can't find extractor for $subname";
     my ( $module, $version ) = $handler->($group);
     next unless defined $module;
+    next if $module =~ qr/[.]p[ml]\z/sx;
+    next if $module =~ qr{[/\\.]}sx;
     local $@ = undef;
     ## no critic (RequireCheckingReturnValueOfEval)
     eval { $req->add_minimum( $module, 0 ) };    # If module name is invalid, not adding it is ok
