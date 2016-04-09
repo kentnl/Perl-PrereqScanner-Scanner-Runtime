@@ -40,4 +40,8 @@ requires:
   perl: '5.006'
   strict: '0'
   warnings: '0'
+resources:
+  bugtracker: https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime/issues
+  homepage: https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime
+  repository: https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime.git
 version: '0.001000'

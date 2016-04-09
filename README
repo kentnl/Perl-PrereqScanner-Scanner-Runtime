@@ -17,6 +17,10 @@ provide different kinds of generic "Runtime" detection.
 
     Scans for "Class::Load" specific syntax.
 
+*   "Module::Load"
+
+    Scans for "Module::Load" specific syntax.
+
   AUDIENCE
 
 Its worth noting that this module is not necessarily going to be useful

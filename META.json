@@ -145,6 +145,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime/issues"
+      },
+      "homepage" : "https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime.git",
+         "web" : "https://github.com/kentnl/Perl-PrereqScanner-Scanner-Runtime"
+      }
+   },
    "version" : "0.001000",
    "x_BuiltWith" : {
       "external_file" : "misc/built_with.json"

@@ -11,14 +11,17 @@ my $reqs = $scanner->scan_string(
   q[
   use Module::Runtime;
   use Class::Load;
+  use Module::Load;
 
   use_module('Example');
   load_class('Example2');
+  load Example3;
 ]
 )->as_string_hash;
 
 ok( exists $reqs->{'Example'},  'Module::Runtime example found' ) or diag explain $reqs;
 ok( exists $reqs->{'Example2'}, 'Class::Load example found' )     or diag explain $reqs;
+ok( exists $reqs->{'Example3'}, 'Class::Load example found' )     or diag explain $reqs;
 
 done_testing;
 
