@@ -33,7 +33,11 @@ sub scan_for_prereqs {    ## no critic (RequireArgUnpacking)
 sub _build_slave_scanners {
   require Perl::PrereqScanner::Scanner::Module::Runtime;
   require Perl::PrereqScanner::Scanner::Class::Load;
-  return [ Perl::PrereqScanner::Scanner::Module::Runtime->new(), Perl::PrereqScanner::Scanner::Class::Load->new(), ];
+  require Perl::PrereqScanner::Scanner::Module::Load;
+  return [
+    Perl::PrereqScanner::Scanner::Module::Runtime->new(), Perl::PrereqScanner::Scanner::Class::Load->new(),
+    Perl::PrereqScanner::Scanner::Module::Load->new(),
+  ];
 }
 1;
 
@@ -64,6 +68,10 @@ Scans for L<< C<Module::Runtime>|Module::Runtime >> specific syntax.
 =item * L<< C<Class::Load>|Perl::PrereqScanner::Scanner::Class::Load >>
 
 Scans for L<< C<Class::Load>|Class::Load >> specific syntax.
+
+=item * L<< C<Module::Load>|Perl::PrereqScanner::Scanner::Module::Load >>
+
+Scans for L<< C<Module::Load>|Module::Load >> specific syntax.
 
 =back
 

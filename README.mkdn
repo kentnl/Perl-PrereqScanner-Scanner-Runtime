@@ -32,6 +32,10 @@ that provide different kinds of generic `Runtime` detection.
 
     Scans for [`Class::Load`](https://metacpan.org/pod/Class::Load) specific syntax.
 
+- [`Module::Load`](https://metacpan.org/pod/Perl::PrereqScanner::Scanner::Module::Load)
+
+    Scans for [`Module::Load`](https://metacpan.org/pod/Module::Load) specific syntax.
+
 ## AUDIENCE
 
 Its worth noting that this module is not necessarily going to be useful in part of a `Dist::Zilla`
