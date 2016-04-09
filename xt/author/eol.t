@@ -19,6 +19,7 @@ my @files = (
     't/00-report-prereqs.t',
     't/all_scanners.t',
     't/class-load/basic.t',
+    't/class-load/ignore.t',
     't/module-load/basic.t',
     't/module-load/ignored.t',
     't/module-runtime/fully_qualified.t',
