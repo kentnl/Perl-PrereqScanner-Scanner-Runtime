@@ -17,6 +17,20 @@ provide different kinds of generic "Runtime" detection.
 
     Scans for "Class::Load" specific syntax.
 
+  AUDIENCE
+
+Its worth noting that this module is not necessarily going to be useful
+in part of a "Dist::Zilla" or similar stack. By nature of how this
+works, its job is to find dependencies that likely qualify as
+*optional*.
+
+Hence, blindly advertising what this scanner reports as dependencies is
+not recommended.
+
+This tool is more oriented around turn-key maintainers who want a quick
+way of finding *possible* auto-magical dependency behavior so they can
+make judgment calls about it.
+
 INSTALLATION
 
 This is a Perl module distribution. It should be installed with whichever

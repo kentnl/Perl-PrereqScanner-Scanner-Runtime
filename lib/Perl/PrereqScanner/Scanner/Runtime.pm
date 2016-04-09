@@ -81,6 +81,17 @@ Scans for L<< C<Class::Load>|Class::Load >> specific syntax.
 
 =back
 
+=head2 AUDIENCE
+
+Its worth noting that this module is not necessarily going to be useful in part of a C<Dist::Zilla>
+or similar stack. By nature of how this works, its job is to find dependencies that likely qualify
+as I<optional>.
+
+Hence, blindly advertising what this scanner reports as dependencies is not recommended.
+
+This tool is more oriented around turn-key maintainers who want a quick way of finding
+I<possible> auto-magical dependency behavior so they can make judgment calls about it.
+
 =for Pod::Coverage scan_for_prereqs
 
 =head1 AUTHOR
