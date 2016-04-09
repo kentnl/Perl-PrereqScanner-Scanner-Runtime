@@ -131,6 +131,10 @@
          "file" : "lib/Perl/PrereqScanner/Scanner/Class/Load.pm",
          "version" : "0.001000"
       },
+      "Perl::PrereqScanner::Scanner::Module::Load" : {
+         "file" : "lib/Perl/PrereqScanner/Scanner/Module/Load.pm",
+         "version" : "0.001000"
+      },
       "Perl::PrereqScanner::Scanner::Module::Runtime" : {
          "file" : "lib/Perl/PrereqScanner/Scanner/Module/Runtime.pm",
          "version" : "0.001000"
@@ -370,6 +374,7 @@
                "Dist::Zilla::Plugin::Test::Compile::PerFile" : {
                   "file" : [
                      "lib/Perl/PrereqScanner/Scanner/Class/Load.pm",
+                     "lib/Perl/PrereqScanner/Scanner/Module/Load.pm",
                      "lib/Perl/PrereqScanner/Scanner/Module/Runtime.pm",
                      "lib/Perl/PrereqScanner/Scanner/Runtime.pm"
                   ],
