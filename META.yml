@@ -1,0 +1,37 @@
+---
+abstract: 'Detect various kinds of run-time prerequisites'
+author:
+  - 'Kent Fredric <kentnl@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: '0'
+  File::Spec: '0'
+  Perl::PrereqScanner: '0'
+  Test::More: '0.89'
+  perl: '5.006'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+  perl: '5.006'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.043, CPAN::Meta::Converter version 2.150001'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Perl-PrereqScanner-Scanner-Runtime
+provides:
+  Perl::PrereqScanner::Scanner::Module::Runtime:
+    file: lib/Perl/PrereqScanner/Scanner/Module/Runtime.pm
+    version: '0.001000'
+  Perl::PrereqScanner::Scanner::Runtime:
+    file: lib/Perl/PrereqScanner/Scanner/Runtime.pm
+    version: '0.001000'
+recommends:
+  Moose: '2.000'
+requires:
+  Carp: '0'
+  Moose: '0'
+  Perl::PrereqScanner::Scanner: '0'
+  perl: '5.006'
+  strict: '0'
+  warnings: '0'
+version: '0.001000'

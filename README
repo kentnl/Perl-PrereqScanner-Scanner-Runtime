@@ -1,0 +1,39 @@
+Perl::PrereqScanner::Scanner::Runtime
+
+This distribution contains a collection of various run-time scanners,
+intended to expose "optional" prerequisites to tools that are expressly
+looking for them.
+
+Grading them as optional is presently an exercise left to the user.
+
+This class is a convenience wrapper around a bunch of other classes that
+provide different kinds of generic "Runtime" detection.
+
+*   "Module::Runtime"
+
+    Scans for "Module::Runtime" specific syntax.
+
+INSTALLATION
+
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
+
+  cpanm .
+  cpan  .
+  cpanp -i .
+
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
+
+  perl Makefile.PL
+  make
+  make test
+  make install
+
+COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2016 by Kent Fredric
+<kentfredric@gmail.com>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
