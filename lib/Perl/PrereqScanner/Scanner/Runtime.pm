@@ -10,10 +10,11 @@ our $VERSION = '0.001000';
 
 # AUTHORITY
 
-use Moose qw( with );
-use Perl::PrereqScanner::Scanner::Module::Runtime;
+use Moose qw( with has );
 
 with 'Perl::PrereqScanner::Scanner';
+
+has _slave_scanners => ( is => 'ro', lazy => 1, builder => '_build_slave_scanners' );
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
@@ -23,10 +24,16 @@ no Moose;
 =cut
 
 sub scan_for_prereqs {    ## no critic (RequireArgUnpacking)
-  Perl::PrereqScanner::Scanner::Module::Runtime->scan_for_prereqs(@_);
+  for my $scanner ( @{ $_[0]->_slave_scanners } ) {
+    $scanner->scan_for_prereqs( @_[ 1 .. $#_ ] );
+  }
   return;
 }
 
+sub _build_slave_scanners {
+  require Perl::PrereqScanner::Scanner::Module::Runtime;
+  return [ Perl::PrereqScanner::Scanner::Module::Runtime->new(), ];
+}
 1;
 
 =head1 SYNOPSIS
