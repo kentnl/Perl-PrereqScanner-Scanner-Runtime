@@ -26,7 +26,11 @@ that provide different kinds of generic `Runtime` detection.
 
 - [`Module::Runtime`](https://metacpan.org/pod/Perl::PrereqScanner::Scanner::Module::Runtime)
 
-    Scans for `Module::Runtime` specific syntax.
+    Scans for [`Module::Runtime`](https://metacpan.org/pod/Module::Runtime) specific syntax.
+
+- [`Class::Load`](https://metacpan.org/pod/Perl::PrereqScanner::Scanner::Class::Load)
+
+    Scans for [`Class::Load`](https://metacpan.org/pod/Class::Load) specific syntax.
 
 # AUTHOR
 

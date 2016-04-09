@@ -32,7 +32,8 @@ sub scan_for_prereqs {    ## no critic (RequireArgUnpacking)
 
 sub _build_slave_scanners {
   require Perl::PrereqScanner::Scanner::Module::Runtime;
-  return [ Perl::PrereqScanner::Scanner::Module::Runtime->new(), ];
+  require Perl::PrereqScanner::Scanner::Class::Load;
+  return [ Perl::PrereqScanner::Scanner::Module::Runtime->new(), Perl::PrereqScanner::Scanner::Class::Load->new(), ];
 }
 1;
 
@@ -58,7 +59,12 @@ that provide different kinds of generic C<Runtime> detection.
 
 =item * L<< C<Module::Runtime>|Perl::PrereqScanner::Scanner::Module::Runtime >>
 
-Scans for C<Module::Runtime> specific syntax.
+Scans for L<< C<Module::Runtime>|Module::Runtime >> specific syntax.
+
+=item * L<< C<Class::Load>|Perl::PrereqScanner::Scanner::Class::Load >>
+
+Scans for L<< C<Class::Load>|Class::Load >> specific syntax.
 
 =back
+
 =cut
