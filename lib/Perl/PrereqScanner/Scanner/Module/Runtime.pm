@@ -44,10 +44,16 @@ sub scan_for_prereqs {
     sub {
       return q[] unless $_[1]->isa('PPI::Statement');
       my (@children) = $_[1]->schildren;
-      while ( my $child = shift @children ) {
+      my ( $child, $previous );
+      while (@children) {
+        $previous = $child;
+        $child    = shift @children;
 
         # Match sub call
         next unless $child->isa('PPI::Token::Word') and $child->literal =~ qr/$literal_re/sx;
+
+        # Skip methods
+        next if $previous and $previous->isa('PPI::Token::Operator') and q{->} eq $previous->content;
 
         # Handle a list of arguments as token->next
         if ( $children[0]->isa('PPI::Structure::List') ) {
