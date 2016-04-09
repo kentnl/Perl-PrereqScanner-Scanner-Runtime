@@ -13,6 +13,10 @@ provide different kinds of generic "Runtime" detection.
 
     Scans for "Module::Runtime" specific syntax.
 
+*   "Class::Load"
+
+    Scans for "Class::Load" specific syntax.
+
 INSTALLATION
 
 This is a Perl module distribution. It should be installed with whichever
